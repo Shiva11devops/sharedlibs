@@ -10,7 +10,7 @@ def deploy(jobname,ip,path)
 {
   sh "scp /var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat9/webapps/${path}.war"
 }
-def runtest(jobname,path)
+def runtest(jobname)
 {
-  sh "java -jar /var/lib/jenkins/workspace/${jobname}/${path}.war"
+  sh "java -jar /var/lib/jenkins/workspace/${jobname}/testing.war"
 }
