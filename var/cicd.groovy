@@ -8,9 +8,9 @@ def build()
 }
 def deploy(jobname,ip,path)
 {
-  sh 'scp /var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat9/webapps/${path}'
+  sh "scp /var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat9/webapps/${path}.war"
 }
 def runtest(jobname,path)
 {
-  sh 'java -jar /var/lib/jenkins/workspace/${jobname}/${path}'
+  sh "java -jar /var/lib/jenkins/workspace/${jobname}/${path}.war"
 }
