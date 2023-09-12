@@ -1,4 +1,4 @@
-def git(repo)
+def download(repo)
 {
   git "https://github.com/Shiva11devops/${repo}"
 }
