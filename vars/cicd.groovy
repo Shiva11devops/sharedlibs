@@ -12,5 +12,5 @@ def deploy(jobname,ip,path)
 }
 def runtest(jobname)
 {
-  sh "java -jar /var/lib/jenkins/workspace/${jobname}/testing.war"
+  sh "java -jar /var/lib/jenkins/workspace/${jobname}/testing.jar"
 }
